@@ -2,7 +2,7 @@
 
 % to reduce the size of the PDF:
 % use ghostscript:
-% gs -q -dSAFER -dNOPAUSE -sDEVICE=pdfwrite -sPDFSETTINGS=printer -sOutputFile="resdoc2006sc.pdf" resdoc2006sc.pdf 
+% gs -q -dSAFER -dNOPAUSE -sDEVICE=pdfwrite -sPDFSETTINGS=printer -sOutputFile="resdoc2006sc.pdf" resdoc2006sc.pdf
 
 % the key being sPDFSETTINGS: with options: default, screen, ebook, printer, preprint
 % try also:  -sCompressPages=true
@@ -50,26 +50,26 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 
 \newcommand{\D}{.}
-\newcommand{\bd}{\string~/bio\D data}   %  \string~ is a representation of the home directory 
-\newcommand{\mpamap}{\bd/mpa/maps}       %  \string~ is a representation of the home directory 
-\newcommand{\sab}{\bd/mpa/sab}   %  \string~ is a representation of the home directory 
+\newcommand{\bd}{\string~/bio\D data}   %  \string~ is a representation of the home directory
+\newcommand{\mpamap}{\bd/mpa/maps}       %  \string~ is a representation of the home directory
+\newcommand{\sab}{\bd/mpa/sab}   %  \string~ is a representation of the home directory
 
 
 %%% Title page
 
 
 
-\title[SAB/MPA Framework]{Assessment Framework for the St Anns Bank Marine Protected Area} 
+\title[SAB/MPA Framework]{Assessment Framework for the St Anns Bank Marine Protected Area}
 
 \author[Choi, et al.]{
   Jae S. Choi, Angelia S.M. Vanderlaan, Gordana Lazin, \\
-  Mike McMahon,  Ben Zisserson, Brent Cameron, \\ 
-  Jenna Munden 
+  Mike McMahon,  Ben Zisserson, Brent Cameron, \\
+  Jenna Munden
 }
 
 \institute[DFO] {
-  Population Ecology Division \\ 
-  Fisheries and Oceans Canada \\ 
+  Population Ecology Division \\
+  Fisheries and Oceans Canada \\
   Bedford Institute of Oceanography \\
 }
 
@@ -97,15 +97,15 @@
 \begin{frame}
   \frametitle{Terms of reference}
   \vspace*{-1.0cm}
-    
+
     \begin{itemize}
       \item Health of the Oceans (HOTO, 2007-2012)
       \item National Conservation Plan (NCP, 2014-2019)
-      \item Develop a monitoring approach for Marine Protected Areas (MPAs) 
-      \item Assess their effectiveness in meeting their objectives. 
+      \item Develop a monitoring approach for Marine Protected Areas (MPAs)
+      \item Assess their effectiveness in meeting their objectives.
     \end{itemize}
-    
-  
+
+
 \end{frame}
 
 % ----------------------------------------------------------------
@@ -114,10 +114,10 @@
   \frametitle{MPA: To conserve and protect}
 
   \begin{itemize}
-    \item Commercial and non-commercial fishery resources, including marine mammals, and their \textbf{habitats}; 
-    \item Endangered or threatened marine species, and their \textbf{habitats}; 
-    \item Unique \textbf{habitats}; 
-    \item Marine areas of high \textbf{biodiversity} or biological \textbf{productivity};  
+    \item Commercial and non-commercial fishery resources, including marine mammals, and their \textbf{habitats};
+    \item Endangered or threatened marine species, and their \textbf{habitats};
+    \item Unique \textbf{habitats};
+    \item Marine areas of high \textbf{biodiversity} or biological \textbf{productivity};
     \item Any other marine resource or habitat as is necessary to fulfill the mandate of the Minister.
 \end{itemize}
 
@@ -126,7 +126,7 @@
 \textbf{Bottom line}: productivity, biodiversity, habitat \& species of interest
 
 \end{frame}
-  
+
 
 % ----------------------------------------------------------------
 
@@ -140,7 +140,7 @@
           \includegraphics[width=1.0\textwidth]{\sab/SAB_MPA.pdf}
           %\caption{Bathymetic (100 m resolution) chart of the  St. Anns Bank area with the proposed St Anns Bank Marine Protected Area (thick maroon polygon) and limited fishing zones (maroon lined polygons). See Figure\ref{fig:SAB} for geographic location in a larger map.}
           \label{fig:SABCloseup}
-        \end{figure} 
+        \end{figure}
       \end{column}
       \begin{column}{.4\textwidth}
         Previous discussions of SAB:
@@ -162,16 +162,16 @@
   \begin{block}{}
     \begin{itemize}
     \item	monitor and assess the status/effectiveness of an MPA;
-    \item identify data gaps and sources of uncertainty. 
+    \item identify data gaps and sources of uncertainty.
     \end{itemize}
   \end{block}
-  
+
   \begin{block}{}
 \begin{flushright}
 \emph{... But how?}
 \end{flushright}
   \end{block}
-  
+
 \end{frame}
 
 
@@ -215,8 +215,8 @@
 \begin{frame}[shrink]
   \frametitle{Data sources being considered}
 \begin{itemize}
-	\item AZMP/chlorophyll-a and nutrients: BioChem bottle data 
-  \item AZMP/Zooplankton: BioChem database 
+	\item AZMP/chlorophyll-a and nutrients: BioChem bottle data
+  \item AZMP/Zooplankton: BioChem database
   \item Remote Sensing Data: ocean colour and SST (Remote Sensing Group)
   \item Temperature records: from various sources, especially, Groundfish, Snow crab and AZMP surveys
   \item Salinity (Groundfish surveys/AZMP, BioChem)
@@ -229,7 +229,7 @@
   \item AIS tracks -- Radio-based Automatic Identification System
   \item VMS potentially -- Satellite-based Vessel Monitoring System
 \end{itemize}
-    
+
 \end{frame}
 
 
@@ -242,7 +242,7 @@
   \item Sampling: AZMP surveys, Groundfish surveys, pelagic net tows and water profiles
   \item Spatial coverage: variable no. stations, 143,499 records, 829 missions
   \item Temporal coverage: 1955 to present, annual surveys
-  \item Source code: \url{https://bitbucket.org/ecomod/aegis/inst/scripts/biochem.r}
+  \item Source code: \url{https://github.com/jae0/aegis/tree/master/inst/scripts/biochem.r}
 \end{itemize}
 \end{frame}
 
@@ -298,12 +298,12 @@
 
 \begin{frame}
   \frametitle{BioChem: Zooplankton}
-  \begin{itemize}  
+  \begin{itemize}
     \item Relevance:  productivity, biodiversity, species of interest, habitat (in relative order)
     \item Sampling:  AZMP surveys, Groundfish surveys, pelagic net tows, 400 taxonomic species
-    \item Spatial coverage: 2367 net deployments, 126 missions 
+    \item Spatial coverage: 2367 net deployments, 126 missions
     \item Temporal coverage:,  1999 to 2014, annual surveys
-    \item Source code: https://bitbucket.org/ecomod/aegis/inst/scripts/biochem.r
+    \item Source code: https://github.com/jae0/aegis/tree/master/inst/scripts/biochem.r
   \end{itemize}
 \end{frame}
 
@@ -359,11 +359,11 @@
 \begin{frame}
   \frametitle{Remote Sensing Data: Chlorophyll-a}
     \begin{itemize}
-      \item Relevance:  productivity, habitat, biodiversity and species of interest (in relative order) 
+      \item Relevance:  productivity, habitat, biodiversity and species of interest (in relative order)
       \item Sampling:  Moderate Resolution Imaging Spectroradiometer (MODIS-Aqua; NASA, RSU)
       \item Spatial coverage: 39 N to 62.5 N and 42 W to 71 W, resolution of 1.5 km
       \item Temporal coverage: August 2002 to March 2015, 610 quarter-monthly (8-day) composite  images
-      \item Source code:  \url{https://bitbucket.org/ecomod/aegis/inst/scripts/remoting.sensing.r}
+      \item Source code:  \url{https://github.com/jae0/aegis/tree/master/inst/scripts/remoting.sensing.r}
     \end{itemize}
 \end{frame}
 
@@ -420,7 +420,7 @@
     \item Sampling:  MODIS, ...
     \item Spatial coverage: 39 N to 62.5 N and 42 W to 71 W, resolution of 1.5 km
     \item Temporal coverage: July 2002 to December 2014, 150 monthly  images
-    \item Source code \url{https://bitbucket.org/ecomod/aegis/inst/scripts/remoting.sensing.r}
+    \item Source code \url{https://github.com/jae0/aegis/tree/master/inst/scripts/remoting.sensing.r}
   \end{itemize}
 \end{frame}
 
@@ -456,7 +456,7 @@
   \item Sampling:  Advanced Very High Resolution Radiometer (AVHRR; NOAA, RSU)
   \item Spatial coverage: 39 N to 62.5 N and 42 W to 71 W, resolution of 1.5 km
   \item Temporal coverage: December 1997 to March 2015, 845 8-day composite images
-  \item Source code: \url{https://bitbucket.org/ecomod/aegis/inst/scripts/remoting.sensing.r}
+  \item Source code: \url{https://github.com/jae0/aegis/tree/master/inst/scripts/remoting.sensing.r}
   \end{itemize}
 \end{frame}
 
@@ -464,12 +464,12 @@
 % ----------------------------------------------------------------
 
 \begin{frame}[shrink]
-  
+
   \begin{figure}[h]
     \centering
     \begin{tabular}{cc}
       \includegraphics[width=0.5\textwidth]{\sab/20.jpg}
-      \includegraphics[width=0.5\textwidth]{\sab/21.jpg} 
+      \includegraphics[width=0.5\textwidth]{\sab/21.jpg}
     \end{tabular}
     \begin{tabular}{cc}
       \includegraphics[width=0.5\textwidth]{\sab/22.jpg}
@@ -511,10 +511,10 @@
 \frametitle{Bottom temperatures}
   \begin{itemize}
     \item Relevance:  productivity, habitat, biodiversity and species of interest
-    \item Sampling:  Groundfish survey, snow crab survey, AZMP profiles 
+    \item Sampling:  Groundfish survey, snow crab survey, AZMP profiles
     \item Spatial coverage: full extent, varied sampling
     \item Temporal coverage: 1950 - present (more historical data present but coverage is variable)
-    \item Source code: https://bitbucket.org/ecomod/aegis/temperature/inst/scripts/01.temperature.R
+    \item Source code: https://github.com/jae0/aegis/temperature/tree/master/inst/scripts/01.temperature.R
   \end{itemize}
 \end{frame}
 
@@ -536,11 +536,11 @@
 \frametitle{Demersal fish and macro-invertebrates}
 \begin{itemize}
   \item Relevance:  productivity, habitat, biodiversity and species of interest
-  \item Sampling:  Groundfish survey, Snow crab survey 
+  \item Sampling:  Groundfish survey, Snow crab survey
   \item Spatial coverage
   \begin{itemize}
     \item Groundfish: full extent, random stratified, variable number of stations
-    \item Snow crab: Colder water environment, geostatistical grids of $\sim$~10 minutes, $\sim$~400 stations 
+    \item Snow crab: Colder water environment, geostatistical grids of $\sim$~10 minutes, $\sim$~400 stations
   \end{itemize}
   \item Temporal coverage
   \begin{itemize}
@@ -549,8 +549,8 @@
   \end{itemize}
   \item Source code
   \begin{itemize}
-    \item url{https://bitbucket.org/ecomod/aegis/inst/scripts/groundfish.r}
-    \item url{https://bitbucket.org/ecomod/bio.snowcrab/inst/scripts/1.snowcrab.r}
+    \item url{https://github.com/jae0/aegis/tree/master/inst/scripts/groundfish.r}
+    \item url{https://github.com/jae0/bio.snowcrab/tree/master/inst/scripts/1.snowcrab.r}
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -576,7 +576,7 @@
 \begin{itemize}
   \item Historical assumption: fixed width (12.5 m); length 3.24 km
   \item Observed: wing spread, tow length are variable
-  \item Problem: net mensuration not recorded systematically 
+  \item Problem: net mensuration not recorded systematically
   \item Historical data needs to be adjusted as much as possible
 \end{itemize}
 
@@ -648,10 +648,10 @@
 \begin{itemize}
 	\item Relevance:  productivity, habitat, biodiversity and species of interest
 	\item Sampling:  MarfIS and ZIFF
-	\item Spatial coverage: full extent 
+	\item Spatial coverage: full extent
 	\item Temporal coverage: 1999 - present
-	\item Source code: \url{https://bitbucket.org/ecomod/aegis/R/marfissci*}
-\end{itemize}	
+	\item Source code: \url{https://github.com/jae0/aegis/R/marfissci*}
+\end{itemize}
 \end{frame}
 
 
@@ -689,8 +689,8 @@
 	\item Sampling:  AIS
 	\item Spatial coverage: Global for satellite AIS, coastal ($\sim$ 100km) for Canadian Coast Guard terrestrial AIS network.
 	\item Temporal coverage: 2013 - present
-	\item Source code: https://bitbucket.org/ecomod/aegis/inst/scripts/ais.r
-\end{itemize}	
+	\item Source code: https://github.com/jae0/aegis/tree/master/inst/scripts/ais.r
+\end{itemize}
 \end{frame}
 
 
@@ -741,7 +741,7 @@
 % ----------------------------------------------------------------
 
 \begin{frame}[shrink]
-  
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.0\textwidth]{\sab/Interpolation_Example1.pdf}
@@ -771,7 +771,7 @@
 
 % ---------------------------------------------------------------
 \begin{frame}[shrink]
-  
+
 \begin{figure}[h]
 	\centering
 	\begin{tabular}{cc}
@@ -792,10 +792,10 @@
 Expensive and/or difficult to monitor and/or with information that is not readily available at present.
 \begin{itemize}
   \item Feeding relationships -- Stomach Database .. not usable
-  \item Pelagic fish (small and large bodied) 
+  \item Pelagic fish (small and large bodied)
   \item Pelagic invertebrates (e.g., squid, jellyfish)
-  \item Substrate characterisation 
-  \item Large marine mammals, reptiles, birds 
+  \item Substrate characterisation
+  \item Large marine mammals, reptiles, birds
   \item Genetic diversity
   \item Seismic activity
   \item Pollution
@@ -812,19 +812,19 @@ Expensive and/or difficult to monitor and/or with information that is not readil
 
 
 \begin{frame}
-\frametitle{Biodiversity} 
+\frametitle{Biodiversity}
   \begin{itemize}
     \item Complex idea: space, time, organisational/phylogenetic components
     \item Control space and time (via "rarefaction" and interpolation) and aggregate taxonomic richness $R$
-  
+
   \[
   log(R) = B0 + log(SA) + log(TS) + e
   \]
-  
+
   \item Estimate dynamics of $R$ via a modeled solution to logistic state space model.
-     
+
   \end{itemize}
-  
+
 \end{frame}
 
 % ---------------------------------------------------------------
@@ -837,7 +837,7 @@ Expensive and/or difficult to monitor and/or with information that is not readil
         \begin{itemize}
           \item Complex idea: space, time, biocomplexity (== phylogeny, phenotypes, abundance, size structure, functional groups, growth, etc.)
           \item Production is not the same as standing biomass (though correlated)
-          \item Control space and time (via interpolation) and aggregate on total and species of interest 
+          \item Control space and time (via interpolation) and aggregate on total and species of interest
           \item Estimate production via a modeled solution to logistic state space model
         \end{itemize}
       \end{column}
@@ -849,7 +849,7 @@ Expensive and/or difficult to monitor and/or with information that is not readil
           \includegraphics[width=1.0\textwidth]{\bd/{bio.snowcrab}/R/maps/{snowcrab.large.males_presence_absence}/snowcrab/climatology/{snowcrab.large.males_presence_absence.mean.climatology.png}
         \end{figure}
       \end{column}
-    \end{columns}    
+    \end{columns}
 
 
 \end{frame}
@@ -878,7 +878,7 @@ Expensive and/or difficult to monitor and/or with information that is not readil
 
 \begin{frame}
   \frametitle{Functional-habitat}
-  \begin{itemize}  
+  \begin{itemize}
   \item $H_f$ $\sim$ Bernoulli process (environmental factors/gradients)
   \item Easily modeled
   \item Make increasingly more precise habitat definitions by adding more environmental and biological factors for increasingly more precise categories of organisms
@@ -900,7 +900,7 @@ Expensive and/or difficult to monitor and/or with information that is not readil
 \label{fig:snowcrabHabitat}
 \centering
 \includegraphics[width=1.0\textwidth]{\bd/{bio.snowcrab}/R/maps/{snowcrab.large.males_presence_absence}/snowcrab/climatology/{snowcrab.large.males_presence_absence.mean.climatology}.png}
-\end{figure}      
+\end{figure}
 \end{column}
 \begin{column}{.5\textwidth}
   \begin{figure}[h]
@@ -918,11 +918,11 @@ Expensive and/or difficult to monitor and/or with information that is not readil
 
 \begin{frame}
   \frametitle{Integral habitat}
-  \begin{itemize}  
-    \item \textbf{Assumption}: Organism community found living in a location indicates/reflects the local habitat 
+  \begin{itemize}
+    \item \textbf{Assumption}: Organism community found living in a location indicates/reflects the local habitat
     \item That is, the biotic community fully integrates all relevant biological and environmental interactions, short and long time and space scales, instantaneous and cumulative
-    \item Characterising taxonomic composition will estimate "habitat space"    
-    \item $H_i$ $\sim$ Eigenanalysis of: 
+    \item Characterising taxonomic composition will estimate "habitat space"
+    \item $H_i$ $\sim$ Eigenanalysis of:
     \begin{itemize}
       \item Correlational structure (Principal Components Analysis)
       \item Chi-squared differences (Correspondence Analysis)
@@ -952,9 +952,9 @@ Expensive and/or difficult to monitor and/or with information that is not readil
   \begin{itemize}
     \item MPAs exist in a spatial context
     \item Spatial scale ($S_s$) will determine which processes will be relevant
-    \item If $S_s$ is small relative to the size of an MPA, the chances of the MPA having an influence is enhanced: i.e., short-range processes dominate (e.g., less mobile species, weakly dispersing, low currents, habitat heterogeneity at small scales). 
+    \item If $S_s$ is small relative to the size of an MPA, the chances of the MPA having an influence is enhanced: i.e., short-range processes dominate (e.g., less mobile species, weakly dispersing, low currents, habitat heterogeneity at small scales).
     \item If $S_s$ is large relative to the size of an MPA, then it would mean that broader/larger processes were influencing the productivity of the species (e.g., higher mobility or dispersal processes/current, and stronger spatial connectivity, habitat heterogeneity at larger scales) -- resulting in a lower likelihood of the MPA having an influence upon the species or components of interest.
-    \item Monitoring and assessment must respect the spatial scales implicated if one is to resolve such patterns, with a focus upon scales > 1 km 
+    \item Monitoring and assessment must respect the spatial scales implicated if one is to resolve such patterns, with a focus upon scales > 1 km
     \item Measure via semi-variogram
   \end{itemize}
 \end{frame}
@@ -967,17 +967,17 @@ Expensive and/or difficult to monitor and/or with information that is not readil
 
       \begin{itemize}
         \item Spatial stochastic process, $y$ defined at some location $x$
-        
-        \item Then the variability of $y$ changes as a function of distance $\Delta x$: 
+
+        \item Then the variability of $y$ changes as a function of distance $\Delta x$:
       \end{itemize}
-      
+
       \begin{eqnarray*}
         \label{eq:semivariogram}
         \gamma(x) &=& \frac{1}{2} \ \textrm{Var} [ y(x) - y(x + \Delta x)]  \\
       \end{eqnarray*}
-      
+
       DEFINE: $S_s$ = distance at which the variance increases asymptotically to $\sim~0.75\%$ of the total variance.
- 
+
 \end{frame}
 
 % ---------------------------------------------------------------
@@ -1001,8 +1001,8 @@ Expensive and/or difficult to monitor and/or with information that is not readil
     \label{fig:spatialrangeBathy}
   \end{figure}
         \end{column}
-      \end{columns}    
-                
+      \end{columns}
+
 \end{frame}
 
 % ---------------------------------------------------------------
@@ -1013,7 +1013,7 @@ Expensive and/or difficult to monitor and/or with information that is not readil
     \item MPAs exist in a temporal context
     \item Temporal scale will determine which processes will be relevant and intensity of monitoring effort
     \item Short-range variations require higher sampling effort to resolve/understand the issues and vice-versa.
-    \item Measure: cumulative periodogram -- the cumulative variance found at different wavelengths ($\omega$). It is a discrete sample estimate of the continuous concept of spectral density $\gamma(t)$ 
+    \item Measure: cumulative periodogram -- the cumulative variance found at different wavelengths ($\omega$). It is a discrete sample estimate of the continuous concept of spectral density $\gamma(t)$
   \end{itemize}
 \end{frame}
 
@@ -1025,16 +1025,16 @@ Expensive and/or difficult to monitor and/or with information that is not readil
   \frametitle{Cumulative periodogram}
       \begin{itemize}
         \item Temporal process, $y$ defined at some time $t$
-        \item Then the variability of $y$ changes as a function of wavelength $\omega x$: 
+        \item Then the variability of $y$ changes as a function of wavelength $\omega x$:
       \end{itemize}
-      
+
       \begin{equation}
       \label{eq:spectraldDensity}
       \gamma(t) = \int_{-1/2}^{1/2} e^{2\pi i \omega t} f(\omega) d \omega
       \end{equation}
-      
+
       DEFINE: Temporal scale = time at which the cumulative variance increases asymptotically to $\sim~0.75\%$ of the total variance.
-  
+
 \end{frame}
 
 % ---------------------------------------------------------------
@@ -1043,21 +1043,21 @@ Expensive and/or difficult to monitor and/or with information that is not readil
   \frametitle{Connectivity: Space-time models}
 \begin{itemize}
   \item Spatial and temporal patterns coexist and are correlated
-  \item Recent methods, using a Markov Random Field representation of $y$ permits some interesting classes of space-time models to be parameterized that can model $\gamma(t)$ and $\gamma(x)$ simultaneously. 
-  \item Another class of models known as Stochastic spatio-temporal simulation models, also known as "birth-death models" and shows much promise.  
-  \item Problem: both are still computationally demanding. 
-\end{itemize} 
+  \item Recent methods, using a Markov Random Field representation of $y$ permits some interesting classes of space-time models to be parameterized that can model $\gamma(t)$ and $\gamma(x)$ simultaneously.
+  \item Another class of models known as Stochastic spatio-temporal simulation models, also known as "birth-death models" and shows much promise.
+  \item Problem: both are still computationally demanding.
+\end{itemize}
 \end{frame}
 
 % ---------------------------------------------------------------
 \begin{frame}
   \frametitle{Connectivity: Tagging, mark-recapture}
-  \begin{itemize} 
+  \begin{itemize}
     \item Movement: Acoustic tags (OTN, EMERA, snow crab industry, Oceans)
     \item Mark-recapture studies: sea turtles, seals, sharks ... Data gaps
     \item Genetic connectivity (no work) .. Data gap
   \end{itemize}
-    
+
 \end{frame}
 
 
@@ -1065,7 +1065,7 @@ Expensive and/or difficult to monitor and/or with information that is not readil
 \begin{frame}
   \frametitle{Risk modeling}
   \begin{itemize}
-    \item Risk = probability inference 
+    \item Risk = probability inference
     \item Methods of error propagation
     \begin{itemize}
       \item Deterministic: Mechanistic model $\rightarrow$ approximations or simulations  $\rightarrow$ error distribution of $y$
@@ -1073,8 +1073,8 @@ Expensive and/or difficult to monitor and/or with information that is not readil
     \end{itemize}
     \item Focus upon the phenomenological approach
   \end{itemize}
-  
-  
+
+
 \end{frame}
 
 % ---------------------------------------------------------------
@@ -1083,15 +1083,15 @@ Expensive and/or difficult to monitor and/or with information that is not readil
   \frametitle{Logistic model}
 
 Describe system state, $y$ (e.g., aggregate biomass, biodiversity, habitat, etc) as a logistic model. The discrete form of the basic normalised logistic equation is:
-       
-    \begin{equation} 
+
+    \begin{equation}
     \label{eqLogisticDiscrete}
     y_t  \approx r y_{t-1} (1 - y_{t-1} )
     \end{equation}
-    
+
 with parameters, $\theta=\{r,K\}$. A state space representation where an additional observation model:
 
-\begin{equation} 
+\begin{equation}
 \label{eqLogisticDiscreteStateSpace}
 O_t = q y_t
 \end{equation}
@@ -1121,7 +1121,7 @@ with parameters, $\theta=\{r,K,q\}$.
 % ---------------------------------------------------------------
 
 
-\begin{frame} 
+\begin{frame}
   \frametitle{Anthropogenic threats and pressures}
   \begin{itemize}
     \item Trawling and dredging disturbances
@@ -1131,8 +1131,8 @@ with parameters, $\theta=\{r,K,q\}$.
     \item Vessel-noise disturbances
   \end{itemize}
 
-Question: How to express the cumulative impacts on productivity, habitat, biodiversity, and endangered or threatened species?  One possible way forward: normalise each threat on a zero-one scale to compare the intensity of threats across the region 
-weighted and combined to examine cumulative anthropogenic threats. Others? 
+Question: How to express the cumulative impacts on productivity, habitat, biodiversity, and endangered or threatened species?  One possible way forward: normalise each threat on a zero-one scale to compare the intensity of threats across the region
+weighted and combined to examine cumulative anthropogenic threats. Others?
 
 \end{frame}
 
@@ -1140,7 +1140,7 @@ weighted and combined to examine cumulative anthropogenic threats. Others?
 % ---------------------------------------------------------------
 
 
-\begin{frame} 
+\begin{frame}
 More to come...
 \end{frame}
 

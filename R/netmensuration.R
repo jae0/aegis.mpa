@@ -3,8 +3,7 @@
 netmensuration = function() {
 
     # set up libs and bio functions
-    p = aegis::aegis_parameters( DS="groundfish", year.assessment=2016 )
-    # p = aegis::aegis_parameters( year.assessment=2016, netmensuration.years=2016 )
+    p = aegis.survey::groundfish_parameters( year.assessment=2016 )
 
     # steps required to recreate a local database of all data
     recreate.perley.db = FALSE

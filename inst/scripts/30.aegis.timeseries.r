@@ -189,7 +189,7 @@ loadfunctions("bmvm")  ## mostly complete
 # ----
 
 
-project.library( "aegis", "stmv", "aegis.base")
+project.library( "aegis", "stmv", "aegis")
 
 setwd( project.datadirectory("aegis", "data") )
 

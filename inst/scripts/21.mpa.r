@@ -4,9 +4,8 @@
 # new comment
 
 year.assessment = 2016
-p = aegis::aegis_parameters( DS="mpa", yrs=1999:year.assessment )
+p = aegis.mpa::mpa_parameters( yrs=1999:year.assessment )
 p$stmv_local_modelengine = "gam"
-p = aegis::aegis_parameters( p=p, DS="stmv" )
 
 polys = mpa.db( p=p, DS="polygons.redo" ) # obtain and save a local cache of polygons of the mpa/aoi
 # polys = mpa.db( p=p, DS="polygons" )

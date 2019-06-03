@@ -104,7 +104,7 @@ marfissci.simple.map<-function(rds,
   {
   #bathy data
     writeLines("Generating contours")
-   p = aegis_parameters( DS="bathymetry" )
+   p = aegis.bathymetry::bathymetry_parameters()
    p = spatial_parameters( p=p, spatial.domain="canada.east.highres" )
    depths = c(100, 200, 300, 400, 500, 600, 700, 800, 900) #, 2000, 5000 )
    plygn = isobath.db( p=p, DS="isobath", depths=depths  )
