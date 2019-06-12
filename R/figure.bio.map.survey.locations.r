@@ -2,7 +2,7 @@ figure.bio.map.survey.locations = function( p ) {
 
   set = survey.db( DS="set.base", p=p )
   # redo coast to get unclipped version
-  coast = aegis::coastline.db( DS=" gshhg coastline full redo ",
+  coast = aegis.coastline::coastline.db( DS=" gshhg coastline full redo ",
         xlim=p$corners$lon, ylim=p$corners$lat, no.clip=TRUE, level=1 )
   plot( coast, col="transparent", border="steelblue2" ,
      xlim=c(-68,-55), ylim=c(41,48),
