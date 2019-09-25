@@ -2,9 +2,9 @@
 figure.mpa.closeup = function( p ) {
   outfile=file.path(p$project.outdir.root, "mpa", "mpa_closeup.pdf")
   polys = mpa.db( p=p, DS="polygons" ) # load saved version made in jae0/mpa/src/mpa.r
-  polys$map.contours = spTransform(polys$map.contours, CRS(p$internal.crs))
-  polys$map.coastline = spTransform(polys$map.coastline, CRS(p$internal.crs))
-  polys$sab.polygons = spTransform(polys$sab.polygons, CRS(p$internal.crs))
+  polys$map.contours = spTransform(polys$map.contours, CRS(p$aegis_proj4string_planar_km))
+  polys$map.coastline = spTransform(polys$map.coastline, CRS(p$aegis_proj4string_planar_km))
+  polys$sab.polygons = spTransform(polys$sab.polygons, CRS(p$aegis_proj4string_planar_km))
   aoi = extent(polys$sab.polygons )
   aoi@xmin = aoi@xmin -55
   aoi@xmax = aoi@xmax +40

@@ -1,6 +1,6 @@
 
 
-mpa_parameters = function( p=NULL, project.name=NULL, project.mode="default", ... ) {
+mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", ... ) {
 
   # ---------------------
   # deal with additional passed parameters
@@ -17,17 +17,17 @@ mpa_parameters = function( p=NULL, project.name=NULL, project.mode="default", ..
     "maps", "mapdata", "maptools", "parallel",  "rgdal", "rgeos",  "sp", "splancs", "GADMTools" ) )
   p$libs = c( p$libs, project.library ( "aegis", "aegis.mpa" ) )
 
-  p$project.name = ifelse ( !is.null(project.name), project.name, "mpa" )
+  p$project_name = ifelse ( !is.null(project_name), project_name, "mpa" )
 
-  if ( !exists("data_root", p) ) p$data_root = project.datadirectory( "aegis", p$project.name )
+  if ( !exists("data_root", p) ) p$data_root = project.datadirectory( "aegis", p$project_name )
   if ( !exists("datadir", p) )   p$datadir  = file.path( p$data_root, "data" )
   if ( !exists("modeldir", p) )  p$modeldir = file.path( p$data_root, "modelled" )
 
   if ( !file.exists(p$datadir) ) dir.create( p$datadir, showWarnings=F, recursive=T )
   if ( !file.exists(p$modeldir) ) dir.create( p$modeldir, showWarnings=F, recursive=T )
 
-  if (!exists("spatial.domain", p) ) p$spatial.domain = "SSE.mpa"
-  if (!exists("spatial.domain.subareas", p)) p$spatial.domain.subareas = c( "snowcrab" )
+  if (!exists("spatial_domain", p) ) p$spatial_domain = "SSE.mpa"
+  if (!exists("spatial_domain_subareas", p)) p$spatial_domain_subareas = c( "snowcrab" )
   p = spatial_parameters( p=p)
 
   # define focal years
@@ -41,12 +41,12 @@ mpa_parameters = function( p=NULL, project.name=NULL, project.mode="default", ..
   p$map.depthcontours.colours = c( "gray90", "gray85", "gray80", "gray74", "gray72", "gray70" )
 
 
-  if (project.mode=="default") {
+  if (project_class=="default") {
     return(p)
   }
 
 
-  if (project.mode=="stmv") {
+  if (project_class=="stmv") {
     p$libs = c( p$libs, project.library ( "stmv", "netmensuration" ) )
 
     p$DATA = 'mpa.db( p=p, DS="stmv_inputs" )'
@@ -60,7 +60,7 @@ mpa_parameters = function( p=NULL, project.name=NULL, project.mode="default", ..
 
 
 
-  if (project.mode=="carstm") {
+  if (project_class=="carstm") {
     p$libs = c( p$libs, project.library ( "carstm" ) )
 
     return(p)
