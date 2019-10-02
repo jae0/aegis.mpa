@@ -33,6 +33,9 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", .
   # define focal years
   if (!exists("yrs", p)) p$yrs = c(1999:lubridate::year(lubridate::now()))  # years for modelling and interpolation
 
+  p = temporal_parameters(p=p, aegis_dimensionality="space-year")
+
+
   p$taxa =  "maxresolved"
   p$map.regions = c("Canada", "USA") # library "map" coastline polygon designations
   p$map.output.directory = file.path( p$project.outdir.root, "maps")
@@ -54,7 +57,8 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", .
     if (!exists("variables", p)) p$variables = list()
     if (!exists("LOCS", p$variables)) p$variables$LOCS=c("plon", "plat")
     if (!exists("TIME", p$variables)) p$variables$TIME="tiyr"
-    p = aegis_parameters(p=p, DS="stmv_spatiotemporal_model", stmv_dimensionality="space-year" )
+
+    p = aegis_parameters(p=p, DS="stmv" ) # generics:
     return(p)
   }
 
@@ -62,6 +66,7 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", .
 
   if (project_class=="carstm") {
     p$libs = c( p$libs, project.library ( "carstm" ) )
+    p = aegis_parameters(p=p, DS="carstm" ) # generics:
 
     return(p)
   }
