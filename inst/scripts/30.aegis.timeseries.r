@@ -10,7 +10,7 @@
     year.assessment=lubridate::year(Sys.Date())
     year.assessment=lubridate::year(Sys.Date()) -1
   }
-  p = bio.snowcrab::snowcrab.parameters( yrs=1999:year.assessment )
+  p = bio.snowcrab::snowcrab_parameters( yrs=1999:year.assessment )
 
   # setwd( project.datadirectory("aegis") )
 
@@ -140,7 +140,7 @@ loadfunctions("bmvm")  ## mostly complete
 
   if (!exists("year.assessment")) year.assessment=lubridate::year(Sys.Date())
 
-  p = bio.snowcrab::snowcrab.parameters( yrs=1999:year.assessment )
+  p = bio.snowcrab::snowcrab_parameters( yrs=1999:year.assessment )
 
   set = snowcrab.db("set.with.cat")
   allvars = c(
