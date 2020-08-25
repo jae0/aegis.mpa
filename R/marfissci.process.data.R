@@ -30,11 +30,11 @@ marfissci.process.data <- function(df, agg.minutes=2,
   proj.metric = '+proj=aea +lat_1=20 +lat_2=60 +lat_0=23 +lon_0=-96
                  +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m'
   if (!exists("coast.aea")) {
-    
+
     writeLines("Building the coastline...
                ")
     coast.aea = aegis.coastline::coastline.db( DS="gshhg coastline highres",
-                            crs=proj.metric,
+                            project_to=proj.metric,
                             p=NULL, level=1, xlim=NULL, ylim=NULL )
     #coast.aea<<-spTransform(coast,CRS(proj.metric))
   }
