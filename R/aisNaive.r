@@ -59,7 +59,7 @@ aisNaive <- function(n=20, wallpercent=20, nsim=10 ) {
 
   resolution = 1 # km
   mindist = sqrt( (setX[startposind] - setX[goalposind])^2 + (setY[startposind]-setY[goalposind]) ^2)
-  maxsteps =  trunc( 5 * mindist^2/resolution )  # tolerate some arbitrary upper bound
+  maxsteps =  floor( 5 * mindist^2/resolution )  # tolerate some arbitrary upper bound
 
   paths = matrix( NA, ncol=maxsteps, nrow=nsim )
   paths[,1] = startposind

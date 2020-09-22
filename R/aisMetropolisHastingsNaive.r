@@ -69,7 +69,7 @@ aisNaive <- function(n=20, wallpercent=20 ) {
   jump.increment =1
   resolution = 1 # km
   maxdist = sqrt( (setX[startposind] - setX[goalposind])^2 + (setY[startposind]-setY[goalposind]) ^2)
-  maxsteps =  trunc( 2* ( maxdist / resolution ) ^ 2)  # tolerate some arbitrary upper bound
+  maxsteps =  floor( 2* ( maxdist / resolution ) ^ 2)  # tolerate some arbitrary upper bound
 
   nsim = 10
 
