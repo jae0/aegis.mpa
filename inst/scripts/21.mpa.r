@@ -16,15 +16,15 @@ figure.mpa.closeup(p)
 # 2. map of area of interest:
 figure.mpa.aoi(p )
 
-# 3. survey.db trawl data summaries
+# 3. survey_db trawl data summaries
 pdf( file=file.path(p$project.outdir.root, "trawl.time.density.pdf") )
-  ss = survey.db( p=p, DS="set.base" )
+  ss = survey_db( p=p, DS="set.base" )
   dscols = c( snowcrab="green", groundfish="orange" )
   plot( jitter( dyear) ~ jitter(yr), ss, pch=".", col=dscols[ss$data.source], xlab="Year", ylab="Fractional year", cex=1.5 )
 dev.off()
 
 pdf( file=file.path(p$project.outdir.root, "maps", "trawl.spatial.density.pdf") )
-  ss = survey.db( p=p, DS="set.base" )
+  ss = survey_db( p=p, DS="set.base" )
   dscols = c( snowcrab="green", groundfish="orange" )
   figure.trawl.density(p=p, ss=ss, dscols=dscols )
 dev.off()

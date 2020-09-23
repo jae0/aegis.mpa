@@ -57,7 +57,7 @@ netmensuration = function() {
     # swept areas are computed in bottom.contact.redo ..
     # this step estimates swept area for those where there was insufficient data to compute SA directly from logs,
     # estimate via approximation using speed etc.
-    groundfish.db( p=p, DS="sweptarea.redo" )
+    groundfish_survey_db( p=p, DS="sweptarea.redo" )
 
     netmensuration.figures( p=p, DS="all" )
 

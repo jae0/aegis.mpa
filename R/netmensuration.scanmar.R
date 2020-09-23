@@ -127,7 +127,7 @@ netmensuration.scanmar = function( DS, p, nm=NULL, YRS=NULL, setid=NULL, debugid
       if (length(ii) > 0 ) nm$longitude[ii] = - nm$longitude[ii]
 
       # load groundfish inf table which has timestamps of start/stop times and locations
-      gsinf = groundfish.db( DS="gsinf" )
+      gsinf = groundfish_survey_db( DS="gsinf" )
       gsinfvars=c("id", "sdate", "settype" )
 
       # merge
@@ -295,7 +295,7 @@ netmensuration.scanmar = function( DS, p, nm=NULL, YRS=NULL, setid=NULL, debugid
       return(out)
     }
 
-    gf0 = groundfish.db(DS="gsinf")
+    gf0 = groundfish_survey_db(DS="gsinf")
 
     gf0$nm_id = NA
     gf0$nm_id0 = NA   # this stores the initial id  ... perley data and >=2015 data have hand matched data .. but many are not matched correctly ..
@@ -790,7 +790,7 @@ netmensuration.scanmar = function( DS, p, nm=NULL, YRS=NULL, setid=NULL, debugid
         if (file.exists(fn)) load(fn)
         out = rbind( out, gsinf )
       }
-      gsinf0 = groundfish.db( DS="gsinf" )
+      gsinf0 = groundfish_survey_db( DS="gsinf" )
       if (!is.null(out)) gsinf0 = merge( gsinf0, out, by="id", all.x=TRUE, all.y=FALSE, sort=FALSE )
       gg = which( lubridate::year(gsinf0$sdate) %in% YRS )
       gs = NULL
@@ -798,7 +798,7 @@ netmensuration.scanmar = function( DS, p, nm=NULL, YRS=NULL, setid=NULL, debugid
       return(gs)
     }
 
-    gsinf0 = groundfish.db( DS="gsinf" )
+    gsinf0 = groundfish_survey_db( DS="gsinf" )
     gsinf0$year = lubridate::year( gsinf0$sdate )
     gsinf0.names = names( gsinf0 )
     gsinf0$bottom_duration = NA

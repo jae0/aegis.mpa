@@ -2,7 +2,7 @@ netmensuration.figures = function( p, DS="", outdir = file.path( project.datadir
 
   if (! file.exists( outdir ) ) dir.create( outdir, recursive =TRUE )
 
-  gsinf = groundfish.db( DS="sweptarea" )
+  gsinf = groundfish_survey_db( DS="sweptarea" )
   gg = which( gsinf$geardesc == "Western IIA trawl" & gsinf$settype %in% c(1,2,5) )
   gsinf = gsinf[ gg, ]
 
@@ -82,7 +82,7 @@ netmensuration.figures = function( p, DS="", outdir = file.path( project.datadir
   if (DS %in% c("noSets", "all") ) {
     fn = file.path( outdir, "numberOfSets.pdf" )
     cols = c("slateblue", "orange")
-    gsinf = groundfish.db( DS="sweptarea" ) # use all data not just western 2a
+    gsinf = groundfish_survey_db( DS="sweptarea" ) # use all data not just western 2a
     m = tapply( rep(1,nrow(gsinf)), gsinf$yr, sum)
     bc2 = gsinf[ is.finite(gsinf$bottom_duration) , ]
     n = tapply( rep(1,nrow(bc2)), bc2$yr, sum)
