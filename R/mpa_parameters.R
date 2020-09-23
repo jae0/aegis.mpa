@@ -48,7 +48,7 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", .
   if (project_class=="stmv") {
     p$libs = c( p$libs, project.library ( "stmv", "netmensuration" ) )
 
-    p$DATA = 'mpa.db( p=p, DS="stmv_inputs" )'
+    p$DATA = 'mpa_db( p=p, DS="stmv_inputs" )'
     p$varstomodel = c() ### TODO ..
     if (!exists("stmv_variables", p)) p$stmv_variables = list()
     if (!exists("LOCS", p$stmv_variables)) p$stmv_variables$LOCS=c("plon", "plat")

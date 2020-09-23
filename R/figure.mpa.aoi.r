@@ -3,7 +3,7 @@ figure.mpa.aoi = function(p ) {
 
   outfile=file.path(p$project.outdir.root, "mpa", "mpa.pdf")
 
-  polys = mpa.db( p=p, DS="polygons" ) # load saved version made in jae0/mpa/src/mpa.r
+  polys = mpa_db( p=p, DS="polygons" ) # load saved version made in jae0/mpa/src/mpa.r
   pdf( file=outfile )
     plot( polys$map.coastline, col="transparent", border="steelblue2" ,
        xlim=c(-68,-55), ylim=c(41,48),
