@@ -33,9 +33,7 @@ marfissci.process.data <- function(df, agg.minutes=2,
 
     writeLines("Building the coastline...
                ")
-    coast.aea = aegis.coastline::coastline_db( DS="gshhg coastline highres",
-                            project_to=proj.metric,
-                            p=NULL, level=1, xlim=NULL, ylim=NULL )
+    coast.aea = as( aegis.coastline::coastline_db( project_to=proj.metric), "Spatial" )
     #coast.aea<<-spTransform(coast,CRS(proj.metric))
   }
   buff = agg*78847  #meters in 1 degree of longitude @45N

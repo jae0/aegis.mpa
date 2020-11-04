@@ -75,9 +75,7 @@ marfissci.simple.map<-function(rds,
     {
 
     writeLines("Building the coastline...")
-    coast.aea =  aegis.coastline::coastline_db( DS="gshhg coastline highres",
-                          project_to=proj.metric,
-                          p=NULL, level=1, xlim=NULL, ylim=NULL )
+    coast.aea =  as( aegis.coastline::coastline_db( project_to=proj.metric ), "Spatial" )
       library(rgeos)
       writeLines("Trimming the data to match the selected bounding box (so that data can be projected)")
       coast.clipped.aea <<- gIntersection(gBuffer(coast.aea, byid=TRUE, width=0), spTransform(boundbox,proj.metric))
