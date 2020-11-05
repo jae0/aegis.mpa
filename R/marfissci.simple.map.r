@@ -105,7 +105,7 @@ marfissci.simple.map<-function(rds,
    p = aegis.bathymetry::bathymetry_parameters()
    p = spatial_parameters( p=p, spatial_domain="canada.east.highres" )
    depths = c(100, 200, 300, 400, 500, 600, 700, 800, 900) #, 2000, 5000 )
-   plygn = isobath_db( p=p, DS="isobath", depths=depths  )
+   plygn = as( isobath_db( p=p, DS="isobath", depths=depths ), "Spatial")
    #data must be clipped so it doesn't extend beyond the bounding box
   clip.100 <<- gIntersection(spTransform(plygn["100"], CRS(crs.out)), boundbox.pr)
   clip.200 <<- gIntersection(spTransform(plygn["200"], CRS(crs.out)), boundbox.pr)
