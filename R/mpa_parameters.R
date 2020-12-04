@@ -1,6 +1,6 @@
 
 
-mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", ... ) {
+mpa_parameters = function( p=NULL, project_name=NULL, project_class="core", ... ) {
 
   # ---------------------
   # deal with additional passed parameters
@@ -40,12 +40,12 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", .
   p$map.depthcontours.colours = c( "gray90", "gray85", "gray80", "gray74", "gray72", "gray70" )
 
 
-  if (project_class=="default") {
+  if (project_class=="core") {
     return(p)
   }
 
 
-  if (project_class=="stmv") {
+  if (project_class %in% c("stmv") ) {
     p$libs = c( p$libs, project.library ( "stmv", "netmensuration" ) )
 
     p$DATA = 'mpa_db( p=p, DS="stmv_inputs" )'
@@ -59,9 +59,16 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="default", .
   }
 
 
-
-  if (project_class=="carstm") {
+  if (project_class %in% c("carstm") ) {
     p$libs = c( p$libs, project.library ( "carstm" ) )
+    p = carstm_parameters(p=p) # generics:
+
+    return(p)
+  }
+
+
+  if (project_class %in% c("hybrid", "default") ) {
+    p$libs = c( p$libs, project.library ( "stmv" ) )
     p = carstm_parameters(p=p) # generics:
 
     return(p)
