@@ -63,16 +63,12 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="core", ... 
 
   if (project_class %in% c("carstm") ) {
     p$libs = c( p$libs, project.library ( "carstm" ) )
-    p = carstm_parameters(p=p) # generics:
-
     return(p)
   }
 
 
   if (project_class %in% c("hybrid", "default") ) {
     p$libs = c( p$libs, project.library ( "stmv" ) )
-    p = carstm_parameters(p=p) # generics:
-
     return(p)
   }
 
