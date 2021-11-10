@@ -32,4 +32,4 @@ dev.off()
 # 4. net mensuration related figures
 p$scanmar.dir = file.path( project.datadirectory("aegis"), "data", "nets", "Scanmar" )
 p$marport.dir = file.path( project.datadirectory("aegis"), "data", "nets", "Marport" )
-netmensuration.figures( DS="all", p=p, outdir=p$project.outdir.root  )  # for latex a copy here
+aegis.survey::netmensuration.figures( DS="all", p=p, outdir=p$project.outdir.root  )  # for latex a copy here
