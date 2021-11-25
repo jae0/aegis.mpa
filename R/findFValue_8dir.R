@@ -12,7 +12,7 @@ findFValue_8dir <-function(posind,costsofar, field, goalind){
   # convert (cell) linear index into [row column]
   pind = c(posind, goalind)
   py = ((pind-1)%%n) + 1      # y
-  px = aegis_floor((pind-1)/n) + 1  # x
+  px = trunc((pind-1)/n) + 1  # x
 
   # convert linear index into [row column]
   # directional components:
