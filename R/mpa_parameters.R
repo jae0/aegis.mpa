@@ -31,7 +31,7 @@ mpa_parameters = function( p=NULL, project_name=NULL, project_class="core", ... 
   # define focal years
   if (!exists("yrs", p)) p$yrs = c(1999:lubridate::year(lubridate::now()))  # years for modelling and interpolation
 
-  p = temporal_parameters(p=p, dimensionality="space-time")
+  p = temporal_parameters(p=p, dimensionality="space-time-cyclic")
 
 
   p$taxa =  "maxresolved"
