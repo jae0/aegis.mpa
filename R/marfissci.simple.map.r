@@ -16,7 +16,10 @@ marfissci.simple.map<-function(rds,
   proj.metric = '+proj=aea +lat_1=20 +lat_2=60 +lat_0=23 +lon_0=-96
                  +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m'
   library(classInt)
-  library(rgdal)
+
+  message("FIXE ME::: deprecated libs, use sf/stars")
+
+  # library(rgdal)
   limits = data.frame(X = xlim, Y = ylim)
   coordinates(limits) = c("X", "Y")
   proj4string(limits) = CRS("+proj=longlat +datum=WGS84")
@@ -76,6 +79,9 @@ marfissci.simple.map<-function(rds,
 
     writeLines("Building the coastline...")
     coast.aea =  as( aegis.coastline::coastline_db( project_to=proj.metric ), "Spatial" )
+      
+  message("FIX ME:: deprecated libs, use sf/stars")    
+
       library(rgeos)
       writeLines("Trimming the data to match the selected bounding box (so that data can be projected)")
       coast.clipped.aea <<- gIntersection(gBuffer(coast.aea, byid=TRUE, width=0), spTransform(boundbox,proj.metric))
